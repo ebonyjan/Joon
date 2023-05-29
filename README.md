@@ -1,2 +1,0 @@
-# Joon
-First Project
