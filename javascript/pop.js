@@ -1,26 +1,33 @@
-const images = document.querySelectorAll('1');
+// WRITE YOUR CODE HERE
 
-let currentIndex = 4;
+const images = document.querySelectorAll('#slider img');
+
+
+let currentIndex = 0;
+
 
 function reset() {
   for (let i = 0; i < images.length; i++) {
-    images[i]/classList.remove('active');
+    images[i].classList.remove('active');
   }
 }
 
-function initializesSlider() {
+
+function initializeSlider() {
   reset();
   images[currentIndex].classList.add('active');
 }
+
 
 function slideLeft() {
   reset();
   currentIndex--;
-  if (currentIndex = images.length <0) {
+  if (currentIndex < 0) {
     currentIndex = images.length - 1;
   }
   images[currentIndex].classList.add('active');
 }
+
 
 function slideRight() {
   reset();
@@ -31,12 +38,17 @@ function slideRight() {
   images[currentIndex].classList.add('active');
 }
 
-initializesSlider();
+
+initializeSlider();
+
 
 document.querySelector('#prev').addEventListener('click', function() {
   slideLeft();
-})
+});
+
 
 document.querySelector('#next').addEventListener('click', function() {
   slideRight();
-})
+});
+
+
