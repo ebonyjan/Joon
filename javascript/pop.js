@@ -1,25 +1,42 @@
-// Select the <body> element from the DOM and assign it to the constant "body".
-const body = document.querySelector('body');
+const images = document.querySelectorAll('#slider img');
 
-// Select the HTML element with the ID "mode-toggle". This is the <input> checkbox for toggling between light and dark modes.
-const modeToggle = document.getElementById('mode-toggle');
+let currentIndex = 4;
 
-// Select the HTML element with the class "mode-status". This is the <h2> element that displays the current mode.
-const modeStatus = document.querySelector('.mode-status');
-
-// Define a function named "toggleMode".
-function toggleMode() {
-  // Toggle the class "dark-mode" on the <body>. If the class exists, it is removed; if it does not exist, it is added.
-  body.classList.toggle('dark-mode');
-
-  // Check if the "dark-mode" class is present on the <body>. If so, set "modeMessage" to "Dark Mode", otherwise set it to "Light Mode".
-  const modeMessage = body.classList.contains('dark-mode') ?
-      'Dark Mode'
-      : "Light Mode";
-
-  // Update the text of the "modeStatus" element (the <h2>) to reflect the current mode.
-  modeStatus.innerText = "Currently in " + modeMessage;
+function reset() {
+  for (let i = 0; i < images.length; i++) {
+    images[i]/classList.remove('active');
+  }
 }
 
-// Add a "click" event listener to the "modeToggle" element (the checkbox). When the checkbox is clicked, the "toggleMode" function is called.
-modeToggle.addEventListener('click', toggleMode);
+function initializesSlider() {
+  reset();
+  images[currentIndex].classList.add('active');
+}
+
+function slideLeft() {
+  reset();
+  currentIndex--;
+  if (currentIndex = images.length <0) {
+    currentIndex = images.length - 1;
+  }
+  images[currentIndex].classList.add('active');
+}
+
+function slideRight() {
+  reset();
+  currentIndex++;
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
+  images[currentIndex].classList.add('active');
+}
+
+initializesSlider();
+
+document.querySelector('#prev').addEventListener('click', function() {
+  slideLeft();
+})
+
+document.querySelector('#next').addEventListener('click', function() {
+  slideRight();
+})
