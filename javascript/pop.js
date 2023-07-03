@@ -1,10 +1,8 @@
-// WRITE YOUR CODE HERE
-
-const images = document.querySelectorAll('#slider img');
-
-
+const slider = document.querySelector('.slider');
+const images = slider.querySelectorAll('img');
+const prevButton = document.querySelector('#prev');
+const nextButton = document.querySelector('#next');
 let currentIndex = 0;
-
 
 function reset() {
   for (let i = 0; i < images.length; i++) {
@@ -12,12 +10,10 @@ function reset() {
   }
 }
 
-
 function initializeSlider() {
   reset();
   images[currentIndex].classList.add('active');
 }
-
 
 function slideLeft() {
   reset();
@@ -28,7 +24,6 @@ function slideLeft() {
   images[currentIndex].classList.add('active');
 }
 
-
 function slideRight() {
   reset();
   currentIndex++;
@@ -38,17 +33,9 @@ function slideRight() {
   images[currentIndex].classList.add('active');
 }
 
-
 initializeSlider();
 
-
-document.querySelector('#prev').addEventListener('click', function() {
-  slideLeft();
-});
-
-
-document.querySelector('#next').addEventListener('click', function() {
-  slideRight();
-});
-
-
+if (prevButton && nextButton) {
+  prevButton.addEventListener('click', slideLeft);
+  nextButton.addEventListener('click', slideRight);
+}
