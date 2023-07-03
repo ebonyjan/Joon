@@ -1,4 +1,4 @@
-const images = document.querySelectorAll('#slider img');
+const images = document.querySelectorAll('1');
 
 let currentIndex = 4;
 
