@@ -72,3 +72,11 @@ body {
 .carousel-button.next {
     right: 1rem;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+  padding-left: 300px;
+}
+
