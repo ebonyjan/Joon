@@ -4,10 +4,10 @@
 .grey {
   background: #A8A196;
   margin: 30px;
-  padding: 20px;
+  padding: auto;
 }
 .grid-1 {
-  background: #61677A;
+  background: #A8A196;
   padding: 20px;
-  margin: 30px;
+  margin: 35px;
 }
