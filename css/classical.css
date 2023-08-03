@@ -1,0 +1,13 @@
+.title {
+  text-align: center;
+}
+.grey {
+  background: #9E9FA5;
+  margin: 30px;
+  padding: 20px;
+}
+.grid-1 {
+  background: #61677A;
+  padding: 20px;
+  margin: auto;
+}
