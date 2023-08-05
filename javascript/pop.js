@@ -1,8 +1,3 @@
-const slider = document.querySelector('.slider');
-const images = slider.querySelectorAll('img');
-const prevButton = document.querySelector('#prev');
-const nextButton = document.querySelector('#next');
-let currentIndex = 0;
 
 function reset() {
   for (let i = 0; i < images.length; i++) {
@@ -39,3 +34,8 @@ if (prevButton && nextButton) {
   prevButton.addEventListener('click', slideLeft);
   nextButton.addEventListener('click', slideRight);
 }
+const slider = document.querySelector('.slider');
+const images = slider.querySelectorAll('img');
+const prevButton = document.querySelector('#prev');
+const nextButton = document.querySelector('#next');
+let currentIndex = 0;
