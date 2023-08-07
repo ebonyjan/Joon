@@ -1,4 +1,3 @@
-
 const items = document.querySelectorAll('.item')
 const options = {
   threshold: 0.5

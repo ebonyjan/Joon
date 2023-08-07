@@ -1,4 +1,11 @@
+p {
+  font-size: 18px;
+}
 
+.me-img {
+  width: 300px;
+  padding: 30px;
+}
 
 .row {
   background-color: #4B698A90;
@@ -25,7 +32,7 @@
 }
 
 .container {
-  max-width: 800px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -41,20 +48,9 @@
 }
 
 
-.item > p {
-  text-align: center;
-}
-
-
 .left {
   transform-origin: left center;
   transform: translateX(-50%);
-}
-
-
-.right {
-  transform-origin: right center;
-  transform: translateX(50%);
 }
 
 
@@ -63,3 +59,10 @@
   transform: translateX(0);
 }
 
+.intro {
+  background-color: #8CABFF;
+  border: none;
+  padding-left: 30px;
+  margin: 20px;
+
+}
