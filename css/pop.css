@@ -9,12 +9,11 @@
 
 .title {
   text-align: center;
+  background-color: none;
 }
 
-.blue {
-  
-  margin: 30px;
-  padding: auto;
+#ench {
+  width: 300px;
 }
 
 
