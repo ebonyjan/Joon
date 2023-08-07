@@ -1,5 +1,3 @@
-$("h1 h3").fadeOut(500);
-$("h1 h3").fadeIn(1000).addClass("blue")
 
 const items = document.querySelectorAll('.item')
 const options = {
