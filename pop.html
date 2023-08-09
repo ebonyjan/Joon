@@ -41,10 +41,7 @@
           </ul>
         </li>  
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      
     </div>
   </div>
 </nav>
@@ -71,35 +68,54 @@
 <div class="intro">
   <table>
     <tr>
-      <td>
+      <td class="tab">
         <img class="me-img" src="media/meimg.jpg" alt="Taylor Swift Era Tour poster.">
       </td>
-      <td>
-        <h2> In our Eras era</h2>
-        <p>Taylor Swift has been very busy these past three years. Suring the pandemic she released two albums, <i>Folklore (2020)</i> and <i>Evermore (2021)</i>. She has since released one new album and three re-recorded albums that she can proudly claim as her own. <i>Fearless (Taylor's Version), Red (Taylor's Version), Midnights (2022),</i> and <i>Speak Now (Taylor's Version).</i> In March of this year, Taylor started her Eras Tour, a journey through all of her musical eras, as Taylor describes it. Without a doubt, Taylor has taken over pop music and is having fun with it.  </p>
+      <td class="tab">
+        <h2 style="text-align: center;"> In our Eras era</h2>
+        <p style="text-align: center;">Taylor Swift has been very busy these past three years. Suring the pandemic she released two albums, <i>Folklore (2020)</i> and <i>Evermore (2021)</i>. She has since released one new album and three re-recorded albums that she can proudly claim as her own. <i>Fearless (Taylor's Version), Red (Taylor's Version), Midnights (2022),</i> and <i>Speak Now (Taylor's Version).</i> In March of this year, Taylor started her Eras Tour, a journey through all of her musical eras, as Taylor describes it. Without a doubt, Taylor has taken over pop music and is having fun with it.  </p>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          DISCOGRAPHY
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Taylor Swift's Discography</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <ul>
+                  <li>2006 - Taylor Swift</li>
+                  <li>2008 - Fearless</li>
+                  <li>2010 - Speak Now</li>
+                  <li>2012 - Red</li>
+                  <li>2014 - 1989</li>
+                  <li>2017 - Reputation</li>
+                  <li>2019 - Lover</li>
+                  <li>2020 - Folklore</li>
+                  <li>2020 - Evermore</li>
+                  <li>2021 - Fearless (Taylor's Version)</li>
+                  <li>2021 - Red (Taylor's Version)</li>
+                  <li>2022 - Midnights</li>
+                  <li>2021 - Speak Now (Taylor's Version)</li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </td>
     </tr>
   </table>
 </div>
 
-
-<!--
-<div class="grid-container text-center">
-
-    <div class="row">
-        <div class="col-5 grid-1">
-            <h2>"The last archives of my twenties"</h2>
-                <p>words about indigo</p>
-        </div>
-    
-
-    <div class="col-5">
-        <img src="media/namtiny.jpeg" alt="RM at Rolling Hall">
-        <p class="copy">Kim Namjoon performing at the Rolling Hall in Korea.</p>
-    </div>
-    </div>
- </div>
---->
 
  
 </main>
