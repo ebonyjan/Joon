@@ -20,7 +20,7 @@ p {
 }
 
 #ench {
-  width: 300px;
+  width: max-content;
 }
 
 
@@ -34,6 +34,7 @@ p {
 .container {
   max-width: 500px;
   margin: 0 auto;
+  align: center;
 }
 
 
