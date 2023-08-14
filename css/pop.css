@@ -19,6 +19,9 @@ p {
   background-color: none;
 }
 
+#ench {
+  width: 300px;
+}
 
 
 .grid-container {
@@ -54,19 +57,12 @@ p {
 .slide-in {
   opacity: 1;
   transform: translateX(0);
-  /*for image*/
-  width: max-content;
 }
 
 .intro {
-  background-color: #8cabffb0;
+  background-color: #8CABFF;
   border: none;
-  padding: 40px;
-  margin: 40px 50px;
+  padding-left: 30px;
+  margin: 20px;
 
 }
-
-.tab {
-  padding: 20px;
-}
-
