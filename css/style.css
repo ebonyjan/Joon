@@ -224,3 +224,17 @@ border-color: #83764F;
   opacity: 1;
   transform: translateX(0);
 }
+
+.box-music {
+  display: grid;
+  border: none;
+  grid-template-columns: auto auto ;
+  gap: 10px 15px;
+  padding: 10px;
+  margin: 0px;
+  
+}
+
+.littlebox {
+  box-shadow: 7px 18px 10px rgba(0, 0, 0, 0.5);
+}
