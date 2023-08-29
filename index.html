@@ -42,10 +42,6 @@
             </ul>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
@@ -55,19 +51,7 @@
       <tr>
         <td>
           <h2>Welcome!</h2>
-          <p>Welcome to Joon! My name is Ebony.I am 19 years old and very excited to officially start my web
-            development journey. I am not a creative person and find it very difficult to think of things on my own. By
-            making this page about my love for music, I am hoping to be more creative, practice, and experiment with
-            what I have learned.</p>
-
-          <p>
-            Browse the Home page, Search by Genre, or look at your profile. In the Home page, you will find the weekly
-            newsletter that will include at least four different songs from different genres and artists. This will be a
-            good opportunity to discover new songs, re-discover old favorites, or see what others think about a song you
-            like.
-          </p>
-          <p>Look up songs under the Genre tab or go to your profile to build your playlists and add more songs. </p>
-
+          <p>Welcome to Joon! Est. 2023. My name is Ebony.I am very excited to officially start my web development journey. By making this page about my love for music, I am hoping to be more creative, practice, and experiment with what I have learned.</p>
         </td>
 
         <td> <img class="me-img" src="media/IMG_1906.JPG" alt="Image of the creator of the website"></td>
@@ -80,48 +64,18 @@
     <div class="row">
       <div class="col-5 grid-1">
         <h2>About Me</h2>
-        <p>
-          I created Joon for people to share some of their playlists with others and have a space to express themselves.
-          Who are your favorite artists? What is your favorite genre of music? What songs do you listen to when you are
-          happy, sad, upset? What artists do others with similar tastes listen to? What are some of your favorite
-          lyrics? Music is a big part of our lives. Sometimes we have memories attached to certain songs, or a specific
-          feeling. This is a place to share that with others, or just have it for yourself to personalize.
-        </p>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          MORE
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Let's Connect!</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ul>
+          <li>I am 19 years old (2003)</li>
+          <li>I graduated at 16</li>
+          <li>I am Mexican-American</li>
+          <li>Some of my hobbies include: crocheting, painting, drawing, home improvement projects, reading, learning a new language</li>
+          <li>I love listening to music which is why I created a showcase for music as my first project</li>
+          </ul>
       </div>
 
       <div class="col-5 grid-1 ">
         <h2>Web Development Journey</h2>
-        <p>When I was in high school, I started to get very interested in learning about web development. Out of all the
-          jobs I was interested in, being a web developer interested me the most and I was certain I wouldn't get bored
-          of it quickly. Starting this class has been very exciting and rewarding so far. Creating tables has been so
-          fun for me to learn. Creating tables in HTML is very different from creating one for a powerpoint or a
-          document, but they are so interesting and can be used for many things. So far I have learned about tags,
-          images, embedded videos, favicons, different types of headings, lists, checkboxes, including links and getting
-          them to open in a different browser, and many other things. They can seem like simple things, but it is
-          interesting learning about all the work that makes up a website.</p>
+        <p>When I was in high school, I started to get very interested in learning about web development. Out of all the jobs I was interested in, being a web developer interested me the most and I was certain I wouldn't get bored of it quickly. Starting this class has been very exciting and rewarding so far. There are many challenges and it can be very hard at times however, it has been so much fun learning and looking for different or more efficient ways to solve a problem.</p>
       </div>
 
     </div>
@@ -291,6 +245,76 @@
 <!--end Spotify card-->
   
   <footer>
+    <h1 style="text-align:center;">Newsletter Sign-Up</h1>
+    <form name="MyForm"  method="post" action="thankyou.html">
+        <div style="text-align:center;">
+            <input type="text" name="fullname"  placeholder="Your name">
+            <input type="text" name="email"  placeholder="Your email">
+          <input type="text" name="phonenumber"  placeholder="Phone Number">
+            <input type="submit" name="sending"  value="Submit" onClick="javascript:return validateInputs();">
+        
+        </div>
+    </form>
+
+  <script>
+    function validateInputs()
+        {
+            var SubmitForm;
+            var FormErrors;
+ 
+            SubmitForm = true;
+
+            //Retrieve variables to be validated and sanitized
+            var fullname    = new String(document.MyForm.fullname.value);
+            var email   = new String(document.MyForm.email.value);
+            var phonenumber   = new String(document.MyForm.phonenumber.value);
+
+            //Check that the user inputs are not blank
+            if ( fullname.length < 1 || email.length < 1 || phonenumber.length < 1){    
+                FormErrors = "All fields are mandatory. Please complete the form.";
+                SubmitForm = false;
+            } else {
+                //Set up a filter for the pattern of an email
+
+                var filter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+                // test@test.com
+                
+                //Use test() method to check user email against the filter
+                
+                if (!filter.test(email)){
+                    FormErrors = "Your form contains invalid field entries. Please correct your form before submitting";
+                    SubmitForm = false;
+                }
+            }
+                    
+            if (SubmitForm == false){
+                //The form cannot be submitted.
+                alert(FormErrors);
+                return false;
+            } else {
+                //SANITIZE user inputs by allowing only [a-z 0-9 _ - . @] 
+                //strip forbidden characters
+                fullname = fullname.replace(/[^a-z0-9\s\-]/gim,"");
+                fullname = fullname.trim();
+                email = email.replace(/[^a-z0-9_@.-]/gim,"");
+                email = email.trim();
+                phonenumber = phonenumber.replace(/[^0-9-]/gim,"");
+                phonenumber = phonenumber.trim();
+
+                 if (phonenumber.length > maxLength) {
+                  phonenumber = phonenumber.substring(0, maxLength);
+                 }
+                 return phonenumber;
+                let maxLength = 12;
+                
+
+
+                //ready to submit
+                document.MyForm.submit();
+            }
+        }
+  </script>
+    <!--
     <h2 class="center">Personal Information</h2>
     <p class="center">Sign up for emails to create your special profile and get notified when our weekly newsletter is
       available.</p>
@@ -312,7 +336,7 @@
       <a href="https://www.linkedin.com/in/ebony-preciado/" target="_blank">
         <img src="media/mail.png" width="100px"></a>
     </div>
-
+--->
   </footer>
  <script src="javascript/joonjs.js"></script>
 
