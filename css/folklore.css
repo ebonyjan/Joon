@@ -1,6 +1,14 @@
 .top img {
     width: 50%; 
     height: auto; 
-    align-items: center;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   }
+  
+  .center-image {
+    display: block;
+    margin: 0 auto;
+}
+  
+  .mus {
+    margin: 100px;
+}
